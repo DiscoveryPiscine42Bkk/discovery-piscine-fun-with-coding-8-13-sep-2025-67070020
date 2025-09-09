@@ -1,40 +1,46 @@
-.wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 2px;
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-.section {
+.parallax {
   position: relative;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container::after {
-  content: " ";
+.img1 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Tabby_cat_with_visible_nictitating_membrane.jpg/250px-Tabby_cat_with_visible_nictitating_membrane.jpg");
+}
+
+.img2 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/250px-Kittyply_edit1.jpg");
+}
+
+.caption {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: 100%;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
 }
 
-.quote {
-  background: black;
+.caption .text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  font-size: 2em;
+  border-radius: 10px;
 }
 
-.background-image1::after {
-  background-image: url("https://img.freepik.com/free-vector/watercolor-abstract-purple-background_23-2149120778.jpg");
-}
-
-.background-image2::after {
-  background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+.block {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
 }
